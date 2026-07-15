@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="d-flex justify-content-center align-items-center flex-column">
-      <h1 class="mt-5">Best of the year!</h1>
+      <h1 class="mt-5" th:text="|Best of the year by: ${autore}|"></h1>
       <img alt="2026" th:src="@{/img.png}" class="w-25" />
       <p class="w-50">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolores
