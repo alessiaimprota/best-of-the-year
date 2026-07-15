@@ -1,13 +1,31 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"></html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Best of the year!
-    </title>
-</head>
-<body>
-    <div>ciao</div>
-</body>
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best of the year!</title>
+
+    <link
+      rel="stylesheet"
+      th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}"
+    />
+  </head>
+  <body>
+    <div class="d-flex justify-content-center align-items-center flex-column">
+      <h1 class="mt-5">Best of the year!</h1>
+      <img alt="2026" th:src="@{/img.png}" class="w-25" />
+      <p class="w-50">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolores
+        impedit facilis saepe recusandae explicabo at soluta laudantium
+        blanditiis, repellendus minima consectetur doloribus fugit maxime
+        consequuntur optio, fuga ipsa tempore?
+      </p>
+      <p class="w-50">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. At minus
+        corrupti distinctio placeat debitis voluptate, quam sit culpa doloremque
+        praesentium iste dolor id. Odio, expedita. A temporibus minus
+        perferendis tempora.
+      </p>
+    </div>
+  </body>
 </html>
