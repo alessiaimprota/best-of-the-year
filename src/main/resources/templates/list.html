@@ -1,17 +1,32 @@
-<h1 th:text="|${Title}|"></h1>
-<div>
-  <ul class="list-group" th:if="${list.size>0}">
-    <li class="list-group-item" th:each="item :${list}">
-      <span
-        th:if="${Title == 'Brani migliori!'}"
-        th:text="${item.title}"
-      ></span>
-      <span th:if="${Title == 'Film migliori!'}" th:text="${item.title}"></span>
-    </li>
-  </ul>
-</div>
-<div>
-  <ul class="list-group" th:unless="${list.size>0}">
-    <li class="list-group-item" th:text="Nessun contenuto"></li>
-  </ul>
-</div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <html xmlns:th="http://www.thymeleaf.org"></html>
+    <title>Document</title>
+    <th:block th:replace="~{fragments/fragment :: style}"></th:block>
+  </head>
+  <body>
+    <h1 th:text="|${Title}|"></h1>
+    <div>
+      <ul class="list-group" th:if="${list.size>0}">
+        <li class="list-group-item" th:each="item :${list}">
+          <span
+            th:if="${Title == 'Brani migliori!'}"
+            th:text="${item.title}"
+          ></span>
+          <span
+            th:if="${Title == 'Film migliori!'}"
+            th:text="${item.title}"
+          ></span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul class="list-group" th:unless="${list.size>0}">
+        <li class="list-group-item" th:text="Nessun contenuto"></li>
+      </ul>
+    </div>
+  </body>
+</html>
