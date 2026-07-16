@@ -8,6 +8,9 @@
     <th:block th:replace="~{fragments/fragment :: style}"></th:block>
   </head>
   <body>
+    <div>
+      <th:block th:replace="~{fragments/fragment :: navbar}"></th:block>
+    </div>
     <h1 th:text="|${Title}|"></h1>
     <div>
       <ul class="list-group" th:if="${list.size>0}">

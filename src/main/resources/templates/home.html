@@ -7,6 +7,9 @@
     <th:block th:replace="~{fragments/fragment :: style}"></th:block>
   </head>
   <body>
+    <div>
+      <th:block th:replace="~{fragments/fragment :: navbar}"></th:block>
+    </div>
     <div class="d-flex justify-content-center align-items-center flex-column">
       <h1 class="mt-5" th:text="|Best of the year by: ${autore}|"></h1>
       <img alt="2026" th:src="@{/img.png}" class="w-25" />
