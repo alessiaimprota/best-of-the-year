@@ -1,0 +1,17 @@
+<h1 th:text="|${Title}|"></h1>
+<div>
+  <ul class="list-group" th:if="${list.size>0}">
+    <li class="list-group-item" th:each="item :${list}">
+      <span
+        th:if="${Title == 'Brani migliori!'}"
+        th:text="${item.title}"
+      ></span>
+      <span th:if="${Title == 'Film migliori!'}" th:text="${item.title}"></span>
+    </li>
+  </ul>
+</div>
+<div>
+  <ul class="list-group" th:unless="${list.size>0}">
+    <li class="list-group-item" th:text="Nessun contenuto"></li>
+  </ul>
+</div>
